@@ -1,0 +1,4 @@
+DEBUG:root:TEST
+INFO:root:File not create in folder {fee}
+INFO:root:File not create in folder {fee}
+INFO:root:File not create in folder [Errno 2] No such file or directory: '/home/paul/Code/PythonProjects/Project/data/user.txt'
