@@ -16,54 +16,43 @@ def main(argv):
 
         firstname = input("Input firstname: ")
         lastname = input("Input lastname: ")
-        user = User(firstname, lastname)
-        user.name_length()
+        if firstname and lastname:
+            user = User(firstname, lastname)
+            user.name_length()
+        else:
+            print("firstname or lastname is empty")
 
     elif argv[1] == "-c":
 
         firstname = input("Input firstname: ")
         lastname = input("Input lastname: ")
-        user = User(firstname, lastname)
-        user.current_firstname_and_lastname()
+        if firstname and lastname:
+            user = User(firstname, lastname)
+            user.current_firstname_and_lastname()
+        else:
+            print("firstname or lastname is empty")
     
     elif argv[1] == "-a":
         
         firstname = input("Input firstname: ")
         lastname = input("Input lastname: ")
-        user = User(firstname, lastname)
-        filesys = FileSystem("user.txt")
-        db = DataBase()
-        user.name_length()
-        user.past_name(filesys.read_file())
-        user.current_firstname_and_lastname()
-        db.check_directory()
-        filesys.check_file()
-        filesys.create_file(user.validate())
+        if firstname and lastname:
+            user = User(firstname, lastname)
+            filesys = FileSystem("user.txt")
+            db = DataBase()
+            user.name_length()
+            user.past_name(filesys.read_file())
+            user.current_firstname_and_lastname()
+            db.check_directory()
+            filesys.check_file()
+            filesys.create_file(user.validate())
+        else:
+            print("firstname or lastname is empty")
 
     elif argv[1] == "-h":
         print(help_args)
     else:
         print(help_args)
-        
-
-    # if firstname and lastname:
-    #     # Classes
-    #     user = User(firstname, lastname)
-    #     DB = DataBase()
-    #     filesys = FileSystem("user.txt")
-
-    #     # functions
-
-    #     DB.check_directory()
-    #     user.name_length()
-    #     user.past_name(filesys.read_file())
-    #     filesys.create_file(data=user.validate())
-
-
-
-    # else:
-    #     print("Вы ввели неверно")
-
 
 if __name__ == '__main__':
     main(argv)
