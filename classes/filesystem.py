@@ -33,7 +33,7 @@ class FileSystem:
     def read_file(self):
         try:
             if self.check_file:
-                with open(getcwd() + "/" + self.filename, "r", encoding="utf-8") as rfile:
+                with open(getcwd() + "/data/" + self.filename, "r", encoding="utf-8") as rfile:
                     return rfile.read()
             else:
                 self.log.DEBUG("Wrong not read files")

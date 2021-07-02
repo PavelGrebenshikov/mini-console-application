@@ -27,11 +27,14 @@ class User:
             length = [len(item) for item in self.validate()]
             print("*" * 100)
             print(f"Length new input first word: {length[0]} and length second word: {length[1]}")
-            print("_" * 100)
+            print("*" * 100)
         except TypeError as te:
             self.log.CRITICAL(te)
     
     def past_name(self, file):
-        # print("*" * 100)
         print(f"Last input: {file}")
+    
+    def current_firstname_and_lastname(self):
+        print("*" * 100)
+        print(self.firstname, self.lastname)
         print("*" * 100)
